@@ -26,31 +26,60 @@ function initializeLoginSystem() {
     attachRoleCardListeners();   // events
     protectDashboard();          // block direct access
 }
-// ===== DEPARTMENT INTERACTION =====
-const deptSelect = document.getElementById('departmentSelect');
-const roleCards = document.getElementById('roleCards');
-const roleSection = document.getElementById('roleSection');
+// ================= INIT =================
+document.addEventListener('DOMContentLoaded', function () {
+    initializeLoginSystem();
 
-if (deptSelect && roleCards) {
-    deptSelect.addEventListener('change', () => {
-        const dept = deptSelect.value;
+    // ===== DEPARTMENT INTERACTION (FINAL & CLEAN) =====
+    const deptSelect = document.getElementById('departmentSelect');
+    const roleCards = document.getElementById('roleCards');
+    const roleSection = document.getElementById('roleSection');
 
-        if (dept) {
-            sessionStorage.setItem('department', dept);
+    if (deptSelect && roleCards) {
+        // Initially disable cards
+        roleCards.classList.add('disabled');
 
-            // activate cards
-            roleCards.classList.remove('disabled');
-            roleCards.classList.add('active');
+        deptSelect.addEventListener('change', () => {
+            const dept = deptSelect.value;
 
-            // smooth scroll to roles
-            roleSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-        } else {
-            roleCards.classList.add('disabled');
-        }
+            if (dept) {
+                sessionStorage.setItem('department', dept);
+
+                roleCards.classList.remove('disabled');
+                roleCards.classList.add('active');
+
+                deptSelect.classList.add('selected');
+
+                roleSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                roleCards.classList.add('disabled');
+            }
+        });
+    }
+
+    // ===== BLOCK ROLE CLICK WITHOUT DEPARTMENT =====
+    const cardLinks = document.querySelectorAll('.card-link');
+
+    cardLinks.forEach(card => {
+        card.addEventListener('click', (e) => {
+            const dept = sessionStorage.getItem('department');
+
+            if (!dept) {
+                e.preventDefault();
+                alert('Please select department first');
+            }
+        });
     });
-}
+
+    // ===== CLOSE LOGIN BUTTON =====
+    const closeBtn = document.querySelector('.login-close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    }
+});
+
 
 // ================= ATTACH LISTENERS =================
 function attachRoleCardListeners() {
@@ -232,14 +261,5 @@ function handleCreateAccount(e) {
         "Please contact the IT Department for registration."
     );
 }
-// ===== CLOSE LOGIN MODAL / PAGE =====
-document.addEventListener('DOMContentLoaded', () => {
-    const closeBtn = document.querySelector('.login-close');
 
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            window.location.href = 'index.html';
-        });
-    }
-});
 
