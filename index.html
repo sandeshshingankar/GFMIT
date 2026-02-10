@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Department - GFM Management System</title>
+    <title>NMIET - GFM Management System</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="shared-styles.css">
@@ -26,7 +26,7 @@
         <div class="nav-logo">
             <img src="https://media.licdn.com/dms/image/v2/C510BAQHh1S_VPdKvrA/company-logo_200_200/company-logo_200_200/0/1631433349431/nutanmaharashtrainstituteofengineeringandtechnologytalegaon_logo?e=1770854400&v=beta&t=IJGlWHomctjBm3F_6cBWt9IzQXdwmAyctOTYV-s7_HM"
                  alt="NMIET Logo">
-            <span>IT Department</span>
+            <span>NMIET</span>
         </div>
 
         <ul class="nav-menu">
@@ -51,6 +51,22 @@
 
 <!-- ================= MAIN CONTENT ================= -->
 <main class="main-container">
+    <section class="department-section">
+    <div class="section-header">
+        <h2>Select Department</h2>
+        <p>Choose your department to continue</p>
+    </div>
+
+    <select id="departmentSelect" class="department-dropdown">
+        <option value="">-- Select Department --</option>
+        <option value="it">Information Technology</option>
+        <option value="cse">Computer Science</option>
+        <option value="entc">E & TC</option>
+        <option value="mech">Mechanical</option>
+        <option value="aiml">AIML</option>
+    </select>
+</section>
+
 
     <!-- ROLE SELECTION -->
     <section class="role-section">
