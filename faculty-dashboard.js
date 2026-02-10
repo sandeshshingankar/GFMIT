@@ -56,82 +56,90 @@ const facultyStudentData = {
 const facultyProfiles = {
     'nitin-dhawas': {
         name: 'Dr. Nitin Dhawas',
-        designation: 'Assistant Professor',
-        expertise: 'Software Testing, Information Security',
-        qualification: 'ME (Computer Engineering)',
-        experience: '9.2 Years Teaching',
+        designation: 'Professor',
+        expertise: 'Wireless Communication, Mobile Computing, Cloud Computing',
+        qualification: 'PhD (Electronics & Communication Engineering), ME (Information Technology)',
+        experience: '27 Year Teaching',
+        publications: 'International Journal : 55 International Conference: 14Copyright & Patent: 15',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/dr-nitin-dhawas.png'
     },
     'dheeraj-patil': {
         name: 'Prof. Dheeraj Patil',
-        designation: 'Associate Professor',
-        expertise: 'Web Development, Database Management',
-        qualification: 'BE (Computer Engineering)',
-        experience: '7.5 Years Teaching',
+        designation: 'Assistant Professor & Academic Coordinator',
+        expertise: ' Computer Networking, Computer Security',
+        qualification: 'M.E(Comp Engg) ,B.E(Comp Engg) )',
+        experience: '17 Year Teaching',
+        publications: 'International Journal : 08 International Conference: 04 Copyright & Patent: 02',  
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/mr-diraj-patil.png'
     },
     'nitin-wankhade': {
         name: 'Prof. Nitin Wankhade',
         designation: 'Assistant Professor',
-        expertise: 'Mobile Application Development, Cloud Computing',
-        qualification: 'BE (Computer Engineering)',
-        experience: '6 Years Teaching',
+        expertise: 'Machine Learning, Generative AI',
+        qualification: 'PhD(Pursuing), ME (Information Technology)',
+        experience: '18 Years Teaching',
+        publications: 'International Journal - 02 International Conference -06 Copyright & Patent: 02',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/dr-nitin-wankhande.png'
     },
     'roshni-narkhede': {
         name: 'Prof. Roshni Narkhede',
         designation: 'Assistant Professor',
-        expertise: 'Data Structures, AI',
-        qualification: 'ME (Computer Science)',
-        experience: '5.5 Years Teaching',
+        expertise: 'Software Testing, Information Security',
+        qualification: 'ME (Computer Engineering)',
+        experience: '9.2 Years Teaching',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/mrs-roshini.png'
     },
     'sonali-dongare': {
         name: 'Prof. Sonali Dongare',
         designation: 'Assistant Professor',
-        expertise: 'Java, OOP',
-        qualification: 'BE (Computer Engineering)',
-        experience: '5 Years Teaching',
+        expertise: 'Programming, Data Structure, Machine Learning, Web Application Development',
+        qualification: 'M.E(Comp Engg),B.E(Comp Engg)',
+        experience: '19.2 Years Teaching',
+        publications: 'International Journal : 10 International Conference: 04 Copyright & Patent: 5 Copyright and 1 Patent',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/mrs-sonali-dongre.png'
     },
     'vivek-nagargoje': {
         name: 'Prof. Vivek Nagargoje',
         designation: 'Assistant Professor',
-        expertise: 'Python, ML',
-        qualification: 'BE (IT)',
-        experience: '4.5 Years Teaching',
+        expertise: 'Cloud computing',
+        qualification: 'PhD(Pursuing), ME (Information Technology)',
+        experience: '17 Years Teaching',
+        publications: 'International Journal - 04 International Conference -01 Copyright & Patent: 01(Copyright) & 02(Patent)',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/mr-niraj.png'
     },
     'vanita-deshmukh': {
         name: 'Prof. Vanita Deshmukh',
         designation: 'Assistant Professor',
-        expertise: 'Networking, Security',
-        qualification: 'MCA',
-        experience: '4 Years Teaching',
+        expertise: 'Data communication.',
+        qualification: 'M.E.(E&C)',
+        experience: '3.5 Years',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/11/prof-sunita-deskmukha.png'
     },
     'hemlata-mane': {
         name: 'Prof. Hemlata Mane',
         designation: 'Assistant Professor',
-        expertise: 'Frontend, Web Tech',
-        qualification: 'BE',
-        experience: '3.5 Years Teaching',
+        expertise: 'Software Testing, Information Security Expertise: Programming, Data Structure, Machine Learning, Web Application Development ',
+        qualification: 'ME (Computer Engineering). BE (IT)',
+        experience: '5.3 Years Teaching',
+        publications: 'International Journal : 10 International Conference: 04 Copyright & Patent: 5 Copyright and 1 Patent',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/hemlata-mane.png'
     },
     'bharti-dhote': {
         name: 'Prof. Bharti Dhote',
         designation: 'Assistant Professor',
-        expertise: 'C Programming',
-        qualification: 'BE',
-        experience: '3 Years Teaching',
+        expertise: 'Data Structure, Theory of Computation',
+        qualification: 'PhD (Pursuing), ME (Computer Engineering), B.E. (Computer Engineering)',
+        experience: '19 Years Teaching',
+        publications: 'International journal: 04 International conference:01 Copyright & Patent: 01',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/mrs-bharti.png'
     },
     'ajay-sonawane': {
         name: 'Prof. Ajay Sonawane',
         designation: 'Assistant Professor',
-        expertise: 'Operating Systems',
-        qualification: 'BE',
-        experience: '2.5 Years Teaching',
+        expertise: 'Machine Learning, AIML, Deep Learning, Data Science',
+        qualification: 'PhD (pursuing), MTech.(Computer Science and Engineering)',
+        experience: '7 Years Teaching',
+        publications: 'International Journal: 08 International Conference: 04 Copyright & Patent: 01(Copyright) & 01(Patent)',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/11/prof-ajay-tukaram-sonawane.png'
     }
 };
