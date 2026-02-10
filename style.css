@@ -311,6 +311,15 @@ body {
     pointer-events: auto;
     filter: blur(0);
 }
+.department-dropdown:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0,119,182,0.15);
+}
+
+.department-dropdown.selected {
+    background: #e0f7ff;
+}
+
 
 
 
