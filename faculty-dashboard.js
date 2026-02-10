@@ -1,75 +1,59 @@
 // Student data assigned to each faculty member
+// ================= GET FACULTY FROM URL =================
+const params = new URLSearchParams(window.location.search);
+const facultyKey = params.get('faculty') || 'nitin-dhawas';
+
 const facultyStudentData = {
     'Dr. Nitin Dhawas': [
         { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
-        { name: 'Rohan Kumar', rollNo: '28', class: 'TE IT-A', contact: '8765432109', email: 'rohan.kumar@gmail.com' },
-        { name: 'Sneha Gupta', rollNo: '42', class: 'TE IT-A', contact: '9234567890', email: 'sneha.gupta@gmail.com' },
-    ],
+          ],
     'Prof. Dheeraj Patil': [
         { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
-        { name: 'Rohan Kumar', rollNo: '28', class: 'TE IT-A', contact: '8765432109', email: 'rohan.kumar@gmail.com' },
-        { name: 'Sneha Gupta', rollNo: '42', class: 'TE IT-A', contact: '9234567890', email: 'sneha.gupta@gmail.com' },
-    ],
+           ],
     'Prof. Nitin Wankhade': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
-        { name: 'Rohan Kumar', rollNo: '28', class: 'TE IT-A', contact: '8765432109', email: 'rohan.kumar@gmail.com' },
-        { name: 'Sneha Gupta', rollNo: '42', class: 'TE IT-A', contact: '9234567890', email: 'sneha.gupta@gmail.com' },
-    ],
+           ],
     'Prof. Roshni Narkhede': [
         { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
-        { name: 'Rohan Kumar', rollNo: '28', class: 'TE IT-A', contact: '8765432109', email: 'rohan.kumar@gmail.com' },
-        { name: 'Sneha Gupta', rollNo: '42', class: 'TE IT-A', contact: '9234567890', email: 'sneha.gupta@gmail.com' },
-     ],
+          ],
     'Prof. Sonali Dongare': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
-        { name: 'Rohan Kumar', rollNo: '28', class: 'TE IT-A', contact: '8765432109', email: 'rohan.kumar@gmail.com' },
-        { name: 'Sneha Gupta', rollNo: '42', class: 'TE IT-A', contact: '9234567890', email: 'sneha.gupta@gmail.com' },
-      ],
+          ],
     'Prof. Vivek Nagargoje': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
-        { name: 'Rohan Kumar', rollNo: '28', class: 'TE IT-A', contact: '8765432109', email: 'rohan.kumar@gmail.com' },
-        { name: 'Sneha Gupta', rollNo: '42', class: 'TE IT-A', contact: '9234567890', email: 'sneha.gupta@gmail.com' },
-     ],
+         ],
     'Prof. Vanita Deshmukh': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
-        { name: 'Rohan Kumar', rollNo: '28', class: 'TE IT-A', contact: '8765432109', email: 'rohan.kumar@gmail.com' },
-        { name: 'Sneha Gupta', rollNo: '42', class: 'TE IT-A', contact: '9234567890', email: 'sneha.gupta@gmail.com' },
-      ],
+           ],
     'Prof. Hemlata Mane': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
-        { name: 'Rohan Kumar', rollNo: '28', class: 'TE IT-A', contact: '8765432109', email: 'rohan.kumar@gmail.com' },
-        { name: 'Sneha Gupta', rollNo: '42', class: 'TE IT-A', contact: '9234567890', email: 'sneha.gupta@gmail.com' },
-      ],
+            ],
     'Prof. Bharti Dhote': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
-        { name: 'Rohan Kumar', rollNo: '28', class: 'TE IT-A', contact: '8765432109', email: 'rohan.kumar@gmail.com' },
-        { name: 'Sneha Gupta', rollNo: '42', class: 'TE IT-A', contact: '9234567890', email: 'sneha.gupta@gmail.com' },
-      ],
+            ],
     'Prof. Ajay Sonawane': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
-        { name: 'Rohan Kumar', rollNo: '28', class: 'TE IT-A', contact: '8765432109', email: 'rohan.kumar@gmail.com' },
-        { name: 'Sneha Gupta', rollNo: '42', class: 'TE IT-A', contact: '9234567890', email: 'sneha.gupta@gmail.com' },
-       ],
+             ],
 };
 
 // Faculty profile data
