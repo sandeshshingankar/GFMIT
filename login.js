@@ -26,6 +26,31 @@ function initializeLoginSystem() {
     attachRoleCardListeners();   // events
     protectDashboard();          // block direct access
 }
+// ===== DEPARTMENT INTERACTION =====
+const deptSelect = document.getElementById('departmentSelect');
+const roleCards = document.getElementById('roleCards');
+const roleSection = document.getElementById('roleSection');
+
+if (deptSelect && roleCards) {
+    deptSelect.addEventListener('change', () => {
+        const dept = deptSelect.value;
+
+        if (dept) {
+            sessionStorage.setItem('department', dept);
+
+            // activate cards
+            roleCards.classList.remove('disabled');
+            roleCards.classList.add('active');
+
+            // smooth scroll to roles
+            roleSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        } else {
+            roleCards.classList.add('disabled');
+        }
+    });
+}
 
 // ================= ATTACH LISTENERS =================
 function attachRoleCardListeners() {
@@ -217,3 +242,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
