@@ -1,55 +1,51 @@
 // Student data assigned to each faculty member
-// ================= GET FACULTY FROM URL =================
-const params = new URLSearchParams(window.location.search);
-const facultyKey = params.get('faculty') || 'nitin-dhawas';
-
 const facultyStudentData = {
-    'Dr. Nitin Dhawas': [
+    'nitin-dhawas': [
         { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
           ],
-    'Prof. Dheeraj Patil': [
+    'dheeraj-patil': [
         { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
            ],
-    'Prof. Nitin Wankhade': [
+    'nitin-wankhade': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
            ],
-    'Prof. Roshni Narkhede': [
+    'roshni-narkhede': [
         { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
           ],
-    'Prof. Sonali Dongare': [
+    'sonali-dongare': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
           ],
-    'Prof. Vivek Nagargoje': [
+     'vivek-nagargoje': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
          ],
-    'Prof. Vanita Deshmukh': [
+    'vanita-deshmukh': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
            ],
-    'Prof. Hemlata Mane': [
+    'hemlata-mane': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
             ],
-    'Prof. Bharti Dhote': [
+    'bharti-dhote': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
             ],
-    'Prof. Ajay Sonawane': [
+    'ajay-sonawane': [
        { name: 'Sandesh Shingankar', rollNo: '70', class: 'TE IT-A', contact: '8668916936', email: 'sandeshshingankar8@gmail.com' },
         { name: 'Khushal Shantaram Warule', rollNo: '80', class: 'TE IT-A', contact: '7249256930', email: 'khushalwarule2005@gmail.com' },
         { name: 'Vaishnavi Appasaheb Kadganchi', rollNo: '79', class: 'TE IT-A', contact: '7709411329', email: 'vaishnavikadganchi@gmail.com' },
@@ -58,76 +54,86 @@ const facultyStudentData = {
 
 // Faculty profile data
 const facultyProfiles = {
-    'Dr. Nitin Dhawas': {
+    'nitin-dhawas': {
+        name: 'Dr. Nitin Dhawas',
         designation: 'Assistant Professor',
         expertise: 'Software Testing, Information Security',
         qualification: 'ME (Computer Engineering)',
         experience: '9.2 Years Teaching',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/dr-nitin-dhawas.png'
     },
-    'Prof. Dheeraj Patil': {
+    'dheeraj-patil': {
+        name: 'Prof. Dheeraj Patil',
         designation: 'Associate Professor',
         expertise: 'Web Development, Database Management',
         qualification: 'BE (Computer Engineering)',
         experience: '7.5 Years Teaching',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/mr-diraj-patil.png'
     },
-    'Prof. Nitin Wankhade': {
+    'nitin-wankhade': {
+        name: 'Prof. Nitin Wankhade',
         designation: 'Assistant Professor',
         expertise: 'Mobile Application Development, Cloud Computing',
         qualification: 'BE (Computer Engineering)',
         experience: '6 Years Teaching',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/dr-nitin-wankhande.png'
     },
-    'Prof. Roshni Narkhede': {
+    'roshni-narkhede': {
+        name: 'Prof. Roshni Narkhede',
         designation: 'Assistant Professor',
-        expertise: 'Data Structures, Algorithms, Artificial Intelligence',
+        expertise: 'Data Structures, AI',
         qualification: 'ME (Computer Science)',
         experience: '5.5 Years Teaching',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/mrs-roshini.png'
     },
-    'Prof. Sonali Dongare': {
+    'sonali-dongare': {
+        name: 'Prof. Sonali Dongare',
         designation: 'Assistant Professor',
-        expertise: 'Java Programming, Object-Oriented Design',
+        expertise: 'Java, OOP',
         qualification: 'BE (Computer Engineering)',
         experience: '5 Years Teaching',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/mrs-sonali-dongre.png'
     },
-    'Prof. Vivek Nagargoje': {
+    'vivek-nagargoje': {
+        name: 'Prof. Vivek Nagargoje',
         designation: 'Assistant Professor',
-        expertise: 'Python Programming, Machine Learning',
-        qualification: 'BE (Information Technology)',
+        expertise: 'Python, ML',
+        qualification: 'BE (IT)',
         experience: '4.5 Years Teaching',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/mr-niraj.png'
     },
-    'Prof. Vanita Deshmukh': {
+    'vanita-deshmukh': {
+        name: 'Prof. Vanita Deshmukh',
         designation: 'Assistant Professor',
-        expertise: 'Network Administration, System Security',
-        qualification: 'MCA (Computer Applications)',
+        expertise: 'Networking, Security',
+        qualification: 'MCA',
         experience: '4 Years Teaching',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/11/prof-sunita-deskmukha.png'
     },
-    'Prof. Hemlata Mane': {
+    'hemlata-mane': {
+        name: 'Prof. Hemlata Mane',
         designation: 'Assistant Professor',
-        expertise: 'Web Technologies, Frontend Development',
-        qualification: 'BE (Computer Engineering)',
+        expertise: 'Frontend, Web Tech',
+        qualification: 'BE',
         experience: '3.5 Years Teaching',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/hemlata-mane.png'
     },
-    'Prof. Bharti Dhote': {
+    'bharti-dhote': {
+        name: 'Prof. Bharti Dhote',
         designation: 'Assistant Professor',
-        expertise: 'C Programming, System Administration',
-        qualification: 'BE (Computer Engineering)',
+        expertise: 'C Programming',
+        qualification: 'BE',
         experience: '3 Years Teaching',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/04/mrs-bharti.png'
     },
-    'Prof. Ajay Sonawane': {
+    'ajay-sonawane': {
+        name: 'Prof. Ajay Sonawane',
         designation: 'Assistant Professor',
-        expertise: 'Operating Systems, Linux Administration',
-        qualification: 'BE (Computer Science)',
+        expertise: 'Operating Systems',
+        qualification: 'BE',
         experience: '2.5 Years Teaching',
         image: 'https://www.nmiet.edu.in/wp-content/uploads/2025/11/prof-ajay-tukaram-sonawane.png'
-    },
+    }
 };
 
 let currentFacultyName = '';
@@ -136,7 +142,8 @@ let allStudents = [];
 // Initialize dashboard
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
-    currentFacultyName = urlParams.get('faculty') || 'Dr. Nitin Dhawas';
+    currentFacultyName = urlParams.get('faculty') || 'nitin-dhawas';
+
 
     loadFacultyProfile();
     loadStudents();
@@ -156,7 +163,7 @@ function loadFacultyProfile() {
     profileContainer.innerHTML = `
         <img src="${profile.image}" alt="${currentFacultyName}" class="faculty-profile-image">
         <div class="faculty-profile-info">
-            <h2>${currentFacultyName}</h2>
+           <h2>${profile.name}</h2>
             <p class="designation">${profile.designation}</p>
             <div class="faculty-detail-item">
                 <strong>Expertise</strong>
