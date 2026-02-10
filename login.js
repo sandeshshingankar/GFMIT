@@ -207,3 +207,13 @@ function handleCreateAccount(e) {
         "Please contact the IT Department for registration."
     );
 }
+// ===== CLOSE LOGIN MODAL / PAGE =====
+document.addEventListener('DOMContentLoaded', () => {
+    const closeBtn = document.querySelector('.login-close');
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    }
+});
