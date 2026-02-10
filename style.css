@@ -273,4 +273,22 @@ body {
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+/* ===== HERO BANNER HOVER FIX (WORKING) ===== */
+
+.hero-section {
+    overflow: hidden; /* important for zoom */
+}
+
+.hero-banner {
+    width: 100%;
+    display: block;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.hero-section:hover .hero-banner {
+    transform: scale(1.03);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
 
