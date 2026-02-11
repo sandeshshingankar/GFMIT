@@ -169,33 +169,44 @@ function loadFacultyProfile() {
     }
 
     profileContainer.innerHTML = `
-        <img src="${profile.image}" alt="${currentFacultyName}" class="faculty-profile-image">
+        <img src="${profile.image}" alt="${profile.name}" class="faculty-profile-image">
+
         <div class="faculty-profile-info">
-           <h2>${profile.name}</h2>
+            <h2>${profile.name}</h2>
             <p class="designation">${profile.designation}</p>
+
             <div class="faculty-detail-item">
-                <strong>Expertise</strong>
-                ${profile.expertise}
-            </div>
-            <div class="faculty-detail-item">
-                <strong>Qualification</strong>
+                <strong>Qualification:</strong>
                 ${profile.qualification}
             </div>
+
             <div class="faculty-detail-item">
-                <strong>Experience</strong>
+                <strong>Experience:</strong>
                 ${profile.experience}
             </div>
+
+            <div class="faculty-detail-item">
+                <strong>Expertise:</strong>
+                ${profile.expertise}
+            </div>
+
+            ${
+                profile.publications
+                ? `<div class="faculty-detail-item">
+                        <strong>Publications:</strong>
+                        ${profile.publications}
+                   </div>`
+                : ''
+            }
+
             <div class="faculty-actions">
-                <button class="action-btn btn-edit" aria-label="Edit faculty profile">
-                    ✎ Edit Profile
-                </button>
-                <button class="action-btn btn-message" aria-label="Send message to students">
-                    💬 Send Message
-                </button>
+                <button class="action-btn btn-edit">✎ Edit Profile</button>
+                <button class="action-btn btn-message">💬 Send Message</button>
             </div>
         </div>
     `;
 }
+
 
 // Load students
 function loadStudents() {
